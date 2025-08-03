@@ -1,0 +1,580 @@
+<%- layout('layouts/boilerplate') %>
+
+<!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Enterprise-Grade Security
+                </div>
+                <h1 class="hero-title">Managed Security Services</h1>
+                <h2 class="hero-subtitle">Protect Your Business 24/7</h2>
+                <p class="hero-description">
+                    Comprehensive cybersecurity solutions with round-the-clock monitoring, 
+                    threat detection, and incident response. Safeguard your digital assets 
+                    with our expert security team and AI-powered protection.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99">99.9%</span>
+                        <span class="stat-label">Uptime Guarantee</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">SOC Monitoring</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">&lt;15min</span>
+                        <span class="stat-label">Response Time</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Start Free Assessment
+                    </button>
+                    <button class="btn btn-outline">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="security-dashboard">
+                    <div class="dashboard-header">
+                        <div class="status-indicator active"></div>
+                        <span>Security Operations Center</span>
+                        <div class="live-badge">LIVE</div>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="threat-meter">
+                            <div class="meter-circle">
+                                <div class="meter-center">
+                                    <span class="threat-level">LOW</span>
+                                    <span class="threat-score">2/10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="security-metrics">
+                            <div class="metric">
+                                <i class="fas fa-eye"></i>
+                                <span class="metric-value">1,247</span>
+                                <span class="metric-label">Events Monitored</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-ban"></i>
+                                <span class="metric-value">23</span>
+                                <span class="metric-label">Threats Blocked</span>
+                            </div>
+                            <div class="metric">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="metric-value">100%</span>
+                                <span class="metric-label">Systems Secure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Security Alerts -->
+                <div class="floating-alerts">
+                    <div class="security-alert alert-1">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Malware Blocked</span>
+                    </div>
+                    <div class="security-alert alert-2">
+                        <i class="fas fa-lock"></i>
+                        <span>VPN Secured</span>
+                    </div>
+                    <div class="security-alert alert-3">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Access Verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Security Services</h2>
+                <p class="section-description">
+                    Comprehensive cybersecurity solutions tailored to protect your business from evolving threats
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- 24/7 SOC Monitoring -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="service-title">24/7 SOC Monitoring</h3>
+                    <p class="service-description">
+                        Round-the-clock security operations center monitoring with 
+                        real-time threat detection and immediate response capabilities.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Real-time Monitoring</li>
+                        <li><i class="fas fa-check"></i> Threat Intelligence</li>
+                        <li><i class="fas fa-check"></i> Incident Response</li>
+                        <li><i class="fas fa-check"></i> Compliance Reporting</li>
+                    </ul>
+                    <div class="service-price">Starting at $299/month</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+
+                <!-- Vulnerability Management -->
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="service-title">Vulnerability Management</h3>
+                    <p class="service-description">
+                        Continuous vulnerability scanning, assessment, and remediation 
+                        to keep your systems secure against emerging threats.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Automated Scanning</li>
+                        <li><i class="fas fa-check"></i> Risk Assessment</li>
+                        <li><i class="fas fa-check"></i> Patch Management</li>
+                        <li><i class="fas fa-check"></i> Remediation Support</li>
+                    </ul>
+                    <div class="service-price">Starting at $199/month</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+
+                <!-- Endpoint Protection -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="service-title">Endpoint Protection</h3>
+                    <p class="service-description">
+                        Advanced endpoint detection and response (EDR) solutions 
+                        protecting all devices across your network infrastructure.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Anti-malware Protection</li>
+                        <li><i class="fas fa-check"></i> Behavioral Analysis</li>
+                        <li><i class="fas fa-check"></i> Device Management</li>
+                        <li><i class="fas fa-check"></i> Remote Remediation</li>
+                    </ul>
+                    <div class="service-price">Starting at $149/month</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+
+                <!-- Network Security -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="service-title">Network Security</h3>
+                    <p class="service-description">
+                        Comprehensive network protection with firewalls, intrusion 
+                        detection, and traffic analysis to secure your infrastructure.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Firewall Management</li>
+                        <li><i class="fas fa-check"></i> Intrusion Detection</li>
+                        <li><i class="fas fa-check"></i> Traffic Analysis</li>
+                        <li><i class="fas fa-check"></i> VPN Security</li>
+                    </ul>
+                    <div class="service-price">Starting at $399/month</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+
+                <!-- Identity & Access Management -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="service-title">Identity & Access Management</h3>
+                    <p class="service-description">
+                        Secure user authentication, authorization, and access control 
+                        with multi-factor authentication and privileged access management.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Multi-Factor Authentication</li>
+                        <li><i class="fas fa-check"></i> Single Sign-On</li>
+                        <li><i class="fas fa-check"></i> Privileged Access</li>
+                        <li><i class="fas fa-check"></i> Identity Governance</li>
+                    </ul>
+                    <div class="service-price">Starting at $249/month</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+
+                <!-- Compliance & Governance -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="service-title">Compliance & Governance</h3>
+                    <p class="service-description">
+                        Ensure regulatory compliance with automated reporting, 
+                        audit support, and governance frameworks for your industry.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Regulatory Compliance</li>
+                        <li><i class="fas fa-check"></i> Audit Support</li>
+                        <li><i class="fas fa-check"></i> Policy Management</li>
+                        <li><i class="fas fa-check"></i> Risk Assessment</li>
+                    </ul>
+                    <div class="service-price">Starting at $349/month</div>
+                    <button class="service-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Our Security Services</h2>
+                <p class="section-description">
+                    Advanced security features and capabilities that set us apart from the competition
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Threat Detection</h3>
+                    <p>Machine learning algorithms that identify and respond to threats faster than traditional methods with 99.7% accuracy.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Real-Time Response</h3>
+                    <p>Immediate threat response with automated containment and expert analyst intervention within 15 minutes.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Comprehensive security analytics and reporting with actionable insights and predictive threat modeling.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Security Team</h3>
+                    <p>Certified security professionals with years of experience in cybersecurity and threat management available 24/7.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud-Native Security</h3>
+                    <p>Purpose-built for cloud environments with seamless integration across hybrid and multi-cloud infrastructures.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Zero Trust Architecture</h3>
+                    <p>Implement zero trust security model with continuous verification and least privilege access principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Threat Intelligence Section -->
+    <section id="threat-intel" class="threat-intelligence">
+        <div class="container">
+            <div class="threat-content">
+                <div class="threat-info">
+                    <h2>Real-Time Threat Intelligence</h2>
+                    <p>Stay ahead of cyber threats with our advanced threat intelligence platform that provides real-time insights into the global threat landscape and emerging attack vectors.</p>
+                    
+                    <div class="threat-stats">
+                        <div class="threat-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number" data-target="50">50M+</span>
+                                <span class="stat-label">Global Threat Indicators</span>
+                            </div>
+                        </div>
+                        
+                        <div class="threat-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number" data-target="1">1B+</span>
+                                <span class="stat-label">Security Events Daily</span>
+                            </div>
+                        </div>
+                        
+                        <div class="threat-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-number">&lt;1sec</span>
+                                <span class="stat-label">Threat Detection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="threat-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            Download Threat Report
+                    </div>
+                </div>
+                
+                <div class="threat-visual">
+                    <div class="threat-map">
+                        <div class="map-header">
+                            <h3>Global Threat Map</h3>
+                            <div class="live-indicator">
+                                <span class="pulse"></span>
+                                LIVE
+                            </div>
+                        </div>
+                        <div class="map-content">
+                            <div class="threat-point point-1" data-threat="High Risk"></div>
+                            <div class="threat-point point-2" data-threat="Medium Risk"></div>
+                            <div class="threat-point point-3" data-threat="Low Risk"></div>
+                            <div class="threat-point point-4" data-threat="High Risk"></div>
+                            <div class="threat-point point-5" data-threat="Medium Risk"></div>
+                            <div class="threat-point point-6" data-threat="Critical"></div>
+                        </div>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <span class="legend-color critical"></span>
+                                <span>Critical</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color high"></span>
+                                <span>High Risk</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color medium"></span>
+                                <span>Medium Risk</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color low"></span>
+                                <span>Low Risk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Security Plans & Pricing</h2>
+                <p class="section-description">
+                    Choose the right security package for your business needs and budget
+                </p>
+            </div>
+
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricingToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Annual <span class="discount">Save 20%</span></span>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Essential Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Essential</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="299" data-annual="239">299</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Perfect for small businesses</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 24/7 Basic Monitoring</li>
+                        <li><i class="fas fa-check"></i> Endpoint Protection (up to 25 devices)</li>
+                        <li><i class="fas fa-check"></i> Email Security</li>
+                        <li><i class="fas fa-check"></i> Basic Vulnerability Scanning</li>
+                        <li><i class="fas fa-check"></i> Monthly Reports</li>
+                        <li><i class="fas fa-check"></i> Email Support</li>
+                    </ul>
+                    <button class="plan-btn">Get Started</button>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">Professional</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="799" data-annual="639">799</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">Ideal for growing companies</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 24/7 Advanced SOC Monitoring</li>
+                        <li><i class="fas fa-check"></i> Endpoint Protection (up to 100 devices)</li>
+                        <li><i class="fas fa-check"></i> Network Security Management</li>
+                        <li><i class="fas fa-check"></i> Advanced Threat Detection</li>
+                        <li><i class="fas fa-check"></i> Incident Response</li>
+                        <li><i class="fas fa-check"></i> Weekly Reports</li>
+                        <li><i class="fas fa-check"></i> Phone & Email Support</li>
+                    </ul>
+                    <button class="plan-btn">Get Started</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="1999" data-annual="1599">1,999</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="plan-description">For large organizations</p>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> 24/7 Premium SOC Monitoring</li>
+                        <li><i class="fas fa-check"></i> Unlimited Endpoint Protection</li>
+                        <li><i class="fas fa-check"></i> Complete Network Security</li>
+                        <li><i class="fas fa-check"></i> AI-Powered Threat Hunting</li>
+                        <li><i class="fas fa-check"></i> Dedicated Security Analyst</li>
+                        <li><i class="fas fa-check"></i> Real-time Reporting</li>
+                        <li><i class="fas fa-check"></i> 24/7 Priority Support</li>
+                    </ul>
+                    <button class="plan-btn">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-glass" role="region" aria-labelledby="cta-secure-title">
+  <div class="glass-container">
+    <h2 id="cta-secure-title">Ready to Secure Your Business?</h2>
+    <p>
+      Get a free security assessment and discover vulnerabilities before cybercriminals do.
+      Our experts will analyze your current security posture and provide actionable
+      recommendations within 24 hours.
+    </p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary">
+        <i class="fas fa-shield-alt"></i> Start Free Assessment
+      </button>
+      <button class="btn btn-outline">
+        <i class="fas fa-phone"></i> Talk to Expert
+      </button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get Security Consultation</h2>
+                    <p>Speak with our cybersecurity experts to discuss your security needs and get a customized protection plan tailored to your business requirements.</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>24/7 Security Hotline</h3>
+                                <p><a href="tel:+15555324357">+1 (555) SEC-HELP</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Security Team</h3>
+                                <p><a href="mailto:security@techservices.com">security@techservices.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Security Operations Center</h3>
+                                <p>456 Cyber Street, Security Valley, CA 94001</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="securityForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Business Email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Company Name" required>
+                            <span class="error-message" id="company-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <select id="employees" name="employees" required>
+                                <option value="">Company Size</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-1000">201-1000 employees</option>
+                                <option value="1000+">1000+ employees</option>
+                            </select>
+                            <span class="error-message" id="employees-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Security Service Interest</option>
+                                <option value="soc">24/7 SOC Monitoring</option>
+                                <option value="vulnerability">Vulnerability Management</option>
+                                <option value="endpoint">Endpoint Protection</option>
+                                <option value="network">Network Security</option>
+                                <option value="identity">Identity & Access Management</option>
+                                <option value="compliance">Compliance & Governance</option>
+                                <option value="all">Complete Security Suite</option>
+                            </select>
+                            <span class="error-message" id="service-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Describe your security challenges or requirements" rows="4" required></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Request Security Consultation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

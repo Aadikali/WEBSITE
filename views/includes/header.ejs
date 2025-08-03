@@ -1,0 +1,41 @@
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    Tech<span class="logo-text">X</span>Services
+                </a>
+            </div>
+            
+            <div class="nav-menu nav-menu-rounded" id="nav-menu">
+                
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link <%= title.includes('Home') ? 'active' : '' %>">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/courses" class="nav-link <%= title.includes('Courses') ? 'active' : '' %>">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/services" class="nav-link <%= title.includes('Services') ? 'active' : '' %>">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link <%= title.includes('About') ? 'active' : '' %>">About</a>
+                        </li>
+                    </ul>
+                
+            </div>
+            
+            <div class="nav-actions">
+                <div class="contact-menu-rounded">
+                    <a href="/contact" class="btn btn-primary">Contact Us!</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

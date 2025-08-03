@@ -1,0 +1,44 @@
+<%- layout('layouts/boilerplate') %>
+
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">Our Courses</h1>
+        <p class="page-description">Comprehensive IT training programs designed for career advancement</p>
+    </div>
+</section>
+
+<section class="courses-content">
+    <div class="container">
+        <div class="courses-grid">
+            <% courses.forEach(course => { %>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="<%= course.image %>" alt="<%= course.title %>">
+                </div>
+                <div class="course-content">
+                    <h3 class="course-title"><%= course.title %></h3>
+                    <p class="course-description"><%= course.description %></p>
+                    <div class="course-meta">
+                        <div class="course-rating">
+                            <div class="stars">
+                                <% for(let i = 1; i <= 5; i++) { %>
+                                    <i class="fas fa-star <%= i <= Math.floor(course.rating) ? 'active' : '' %>"></i>
+                                <% } %>
+                            </div>
+                            <span class="rating-text"><%= course.rating %></span>
+                        </div>
+                        <div class="course-students">
+                            <i class="fas fa-users"></i>
+                            <span><%= course.students %> students</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-price">$<%= course.price %></div>
+                        <a href="/contact" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
