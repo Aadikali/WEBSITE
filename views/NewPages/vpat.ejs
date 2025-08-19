@@ -1,9 +1,28 @@
 <%- layout('layouts/boilerplate') %>
 
+    <!-- Loading Screen -->
+    <!-- <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="techx-logo-animation">
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <div class="logo-center">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+            <h2>TechXServices</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p id="loadingText">Initializing security assessment platform...</p>
+        </div>
+    </div> -->
+
     <!-- Hero Section -->
 <section id="home" class="hero">
     <div class="hero-background">
-        <div class="cyber-grid"></div>
+        <!-- <div class="cyber-grid"></div> -->
         <div class="floating-particles">
             <div class="particle" style="--delay: 0s; --duration: 8s;"></div>
             <div class="particle" style="--delay: 1s; --duration: 10s;"></div>
@@ -11,11 +30,7 @@
             <div class="particle" style="--delay: 3s; --duration: 9s;"></div>
             <div class="particle" style="--delay: 4s; --duration: 11s;"></div>
         </div>
-        <div class="security-waves">
-            <div class="wave wave-1"></div>
-            <div class="wave wave-2"></div>
-            <div class="wave wave-3"></div>
-        </div>
+       
     </div>
     <div class="container">
         <div class="hero-content">
@@ -70,7 +85,7 @@
                     </button>
                 </div>
 
-                <div class="hero-stats-bar">
+                <!-- <div class="hero-stats-bar">
                     <div class="stat-group">
                         <div class="stat-item">
                             <span class="stat-number" data-target="15000">0</span>
@@ -92,7 +107,7 @@
                             <span class="stat-label">Hour Response</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="hero-visual">
@@ -634,7 +649,9 @@
 
             <div class="methodology-footer">
                 <div class="methodology-standards">
-                    <h3>Industry Standards & Frameworks</h3>
+                    <div class="section-header">
+                    <h2>Industry Standards & Frameworks</h2>
+                    </div>
                     <div class="standards-grid">
                         <div class="standard-item">
                             <i class="fas fa-shield-alt"></i>
@@ -669,93 +686,77 @@
     <!-- Pricing Section -->
     
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Start Your Security Assessment</h2>
-                <p>Connect with our cybersecurity experts to discuss your VAPT requirements</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
+    <section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="contact-title">Get in Touch</h2>
+                <p class="contact-description">
+                    Ready to transform your career? Contact us today to learn more about our training programs.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-phone"></i>
                         </div>
-                        <div class="info-content">
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-TECH</p>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="info-content">
-                            <h3>Email</h3>
-                            <p>vapt@techxservices.com</p>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>info@techxservices.com</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="info-content">
-                            <h3>Response Time</h3>
-                            <p>Within 4 hours</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-shield-check"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>Certification</h3>
-                            <p>ISO 27001 Certified</p>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>123 Tech Street<br>Silicon Valley, CA 94000</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form" action="/contact" method="POST">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required>
                         <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
+                    
                     <div class="form-group">
-                        <input type="email" id="email" name="email" required>
                         <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
+                    
                     <div class="form-group">
-                        <input type="tel" id="phone" name="phone" required>
                         <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
                     </div>
+                    
                     <div class="form-group">
-                        <input type="text" id="company" name="company" required>
-                        <label for="company">Company Name</label>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <select id="service" name="service" required>
-                            <!-- <option value="">Select Service Type</option> -->
-                            <option value="web-app">Web Application Testing</option>
-                            <option value="network">Network Penetration Testing</option>
-                            <option value="mobile">Mobile App Security Testing</option>
-                            <option value="cloud">Cloud Security Assessment</option>
-                            <option value="api">API Security Testing</option>
-                            <option value="wireless">Wireless Security Testing</option>
-                            <option value="comprehensive">Comprehensive VAPT</option>
-                        </select>
-                        <label for="service">Service Type</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                        <label for="message">Project Details & Requirements</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Request Consultation
-                    </button>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
                 </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Service Modals -->
     <div id="webAppModal" class="modal">
