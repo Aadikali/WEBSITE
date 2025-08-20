@@ -210,6 +210,8 @@ body {
   align-items: center;
   position: relative;
   z-index: 2;
+  margin-top: 3rem;
+
 }
 
 .hero-content {
@@ -560,7 +562,7 @@ body {
 /* Standards Section */
 .standards {
   padding: 5rem 0;
-  background: #111111;
+  /* background: #111111; */
 }
 
 .section-header {
@@ -830,7 +832,7 @@ body {
 /* Benefits Section */
 .benefits {
   padding: 5rem 0;
-  background: #111111;
+  /* background: #111111; */
 }
 
 .benefits-content {

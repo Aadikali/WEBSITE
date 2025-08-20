@@ -30,6 +30,8 @@
   align-items: center;
   position: relative;
   z-index: 2;
+  margin-top: 3rem;
+
 }
 
 .hero-content {
@@ -150,10 +152,238 @@
   outline: none;
 }
 
+/* Hero Visual */
+.hero-visual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.training-dashboard {
+  background: rgba(220, 38, 38, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(220, 38, 38, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.dashboard-header span {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: pulse 2s infinite;
+}
+
+.live-badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+}
+
+.progress-circle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.circle-progress {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #dc2626 0deg, #dc2626 280deg, #374151 280deg, #374151 360deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-progress::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.progress-center {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.progress-percentage {
+  display: block;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.progress-label {
+  display: block;
+  color: #ffffff;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.training-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(220, 38, 38, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #dc2626;
+}
+
+.metric i {
+  color: #dc2626;
+  width: 16px;
+  font-size: 1rem;
+}
+
+.metric-value {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.metric-label {
+  color: #d0d0d0;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+/* Floating Training Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.training-element {
+  position: absolute;
+  background: rgba(220, 38, 38, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  animation: floatElement 8s ease-in-out infinite;
+}
+
+.training-element i {
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+
+.element-1 {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.element-2 {
+  top: 70%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+.element-3 {
+  bottom: 15%;
+  left: 25%;
+  animation-delay: 6s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatElement {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* Programs Section */
 .programs {
   padding: 5rem 0;
-  background: #111111;
+  background: #000000;
 }
 
 .section-header {
@@ -422,7 +652,7 @@
 /* Corporate Training Section */
 .corporate {
   padding: 5rem 0;
-  background: #111111;
+  background: #000000;
   color: #ffffff;
 }
 
@@ -501,10 +731,128 @@
   flex-wrap: wrap;
 }
 
+/* Training Simulator */
+.training-simulator {
+  background: rgba(220, 38, 38, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.simulator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.simulator-header h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.simulator-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10b981;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: pulse 2s infinite;
+}
+
+.simulator-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.simulation-scenario {
+  background: rgba(220, 38, 38, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.simulation-scenario h4 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.simulation-scenario p {
+  color: #dc2626;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.scenario-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(220, 38, 38, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #dc2626, #ef4444);
+  transition: width 0.3s ease;
+}
+
+.scenario-progress span {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.participant-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
+  color: #d0d0d0;
+  font-size: 0.9rem;
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-value {
+  color: #dc2626;
+  font-weight: 600;
+}
+
 /* Contact Section */
 .contact {
   padding: 5rem 0;
-  background: #111111;
+  background: #000000;
   color: #ffffff;
 }
 

@@ -1,96 +1,156 @@
 <%- layout('layouts/boilerplate') %>
 
-<section class="page-hero">
-    <div class="container">
-        <h1 class="page-title">Contact Us</h1>
-        <p class="page-description">Get in touch with our team to start your learning journey</p>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">
+                Contact <span class="text-accent">Sales</span>
+            </h1>
+            <p class="page-subtitle">
+                Ready to transform your career or organization? Let's discuss how we can help you achieve your goals.
+            </p>
+        </div>
+    </section>
 
-<section class="contact-content">
-    <div class="container">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <p>Ready to transform your career? Contact us today to learn more about our training programs and services.</p>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2 class="form-title">Get in Touch</h2>
+                        <p class="form-description">
+                            Fill out the form below and we'll get back to you within 24 hours
+                        </p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company" placeholder="Your Company">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">I'm interested in *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select your interest</option>
+                                <option value="individual">Individual Training</option>
+                                <option value="corporate">Corporate Training</option>
+                                <option value="bootcamp">Bootcamp Programs</option>
+                                <option value="consultation">Free Consultation</option>
+                                <option value="custom">Custom Solution</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your goals and how we can help..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large form-submit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-container">
+                    <div class="contact-info-card">
+                        <h3 class="contact-info-title">Contact Information</h3>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <small>Mon-Fri 9AM-6PM EST</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>sales@techxservices.com</p>
+                                <small>We respond within 24 hours</small>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Address</h4>
+                                <p>123 Tech Street<br>San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <p>info@techxservices.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Address</h4>
-                            <p>123 Tech Street<br>Silicon Valley, CA 94000</p>
+
+                    <div class="why-choose-card">
+                        <h3 class="why-choose-title">Why Choose Us?</h3>
+                        <div class="why-choose-list">
+                            <div class="why-choose-item">
+                                <div class="bullet"></div>
+                                <span>95% job placement rate</span>
+                            </div>
+                            <div class="why-choose-item">
+                                <div class="bullet"></div>
+                                <span>Industry expert instructors</span>
+                            </div>
+                            <div class="why-choose-item">
+                                <div class="bullet"></div>
+                                <span>Hands-on project experience</span>
+                            </div>
+                            <div class="why-choose-item">
+                                <div class="bullet"></div>
+                                <span>Flexible scheduling options</span>
+                            </div>
+                            <div class="why-choose-item">
+                                <div class="bullet"></div>
+                                <span>Career support & mentorship</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="contact-form-container">
-                <% if (typeof query !== 'undefined' && query.success) { %>
-                <div class="success-message">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Thank you for your message! We'll get back to you soon.</p>
-                </div>
-                <% } %>
-                
-                <form class="contact-form" action="/contact" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a subject</option>
-                            <option value="course-inquiry">Course Inquiry</option>
-                            <option value="consultation">Free Consultation</option>
-                            <option value="corporate-training">Corporate Training</option>
-                            <option value="technical-support">Technical Support</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-                </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>

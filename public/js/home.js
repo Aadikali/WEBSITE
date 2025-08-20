@@ -96,11 +96,13 @@ class CoursesSlider {
     this.move();
   }
 
-  move() {
-    this.isAnimating = true;
-    this.track.style.transform = `translateX(${-this.current * 382 * this.slidesPerView}px)`;
-    setTimeout(() => this.isAnimating = false, 400);
-  }
+move() {
+  this.isAnimating = true;
+  const cardWidth = this.cards[0].offsetWidth; // dynamic width
+  this.track.style.transform = `translateX(${-this.current * cardWidth * this.slidesPerView}px)`;
+  setTimeout(() => this.isAnimating = false, 400);
+}
+
 
   dragStart(e) {
     this.isDragging = false;
