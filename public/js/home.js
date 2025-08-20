@@ -154,3 +154,20 @@ move() {
 }
 
 document.addEventListener('DOMContentLoaded', () => new CoursesSlider());
+
+let lastScrollTop = 0;
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop) {
+    // scrolling down → hide header
+    header.classList.add("hidden");
+  } else {
+    // scrolling up → show header
+    header.classList.remove("hidden");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // avoid negative scroll
+});

@@ -28,7 +28,16 @@ body {
   right: 0;
   z-index: 1000;
   border-bottom: 1px solid #333;
+
+  /* added for smooth hide/show */
+  transition: transform 0.3s ease-in-out;
 }
+
+/* when hidden */
+.header.hidden {
+  transform: translateY(-100%);
+}
+
 
 .nav-container {
   max-width: 1200px;
@@ -85,6 +94,23 @@ body {
   border: none;
   font-weight: 600;
 }
+
+/* responsive header for mobile */
+/* Mobile styles */
+@media (max-width: 500px) {
+  /* Logo */
+  .nav-logo a{
+    font-size: 1.5rem;   /* smaller text */
+  }
+
+  .nav-actions {
+    transform: scale(0.8);   /* shrink both button + menu */
+    transform-origin: right center; /* shrink from right side, not middle */
+    gap: 0.5rem;             /* reduce spacing between them */
+  }
+
+}
+
 
 /* Navigation Menu */
 .nav-menu {
@@ -1548,10 +1574,6 @@ body {
   color: #cccccc;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-}
-
-.Quick-links{
-  margin-left: 2rem;
 }
 
 .social-links {
