@@ -1,0 +1,832 @@
+<%- layout('layouts/boilerplate') %>
+
+    <!-- Loading Screen -->
+    <!-- <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="techx-logo-animation">
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <div class="logo-ring"></div>
+                <div class="logo-center">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+            <h2>TechXServices</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p id="loadingText">Initializing security assessment platform...</p>
+        </div>
+    </div> -->
+
+    <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-background">
+        <!-- <div class="cyber-grid"></div> -->
+        <div class="floating-particles">
+            <div class="particle" style="--delay: 0s; --duration: 8s;"></div>
+            <div class="particle" style="--delay: 1s; --duration: 10s;"></div>
+            <div class="particle" style="--delay: 2s; --duration: 12s;"></div>
+            <div class="particle" style="--delay: 3s; --duration: 9s;"></div>
+            <div class="particle" style="--delay: 4s; --duration: 11s;"></div>
+        </div>
+       
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-main">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-check"></i>
+                    <span>Advanced Cybersecurity Solutions</span>
+                    <div class="badge-pulse"></div>
+                </div>
+                <h1>Penetration Testing <span class="highlight">Redefined</span></h1>
+                <p class="hero-subtitle">Comprehensive VAPT services that go beyond traditional security testing. We simulate real-world attacks to identify vulnerabilities before malicious actors do.</p>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Advanced Threat Simulation</h3>
+                            <p>Real-world attack scenarios</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Zero-Day Discovery</h3>
+                            <p>Uncover hidden vulnerabilities</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h3>Actionable Intelligence</h3>
+                            <p>Strategic remediation roadmaps</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large" onclick="scrollToSection('services')">
+                        <i class="fas fa-rocket"></i>
+                        <span>Start Security Assessment</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="openModal('demoModal')">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Demo</span>
+                    </button>
+                </div>
+
+                <!-- <div class="hero-stats-bar">
+                    <div class="stat-group">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="15000">0</span>
+                            <span class="stat-label">Vulnerabilities Found</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="750">0</span>
+                            <span class="stat-label">Systems Secured</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="99">0</span>
+                            <span class="stat-label">Success Rate %</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="24">0</span>
+                            <span class="stat-label">Hour Response</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="hero-visual">
+                <div class="threat-monitor">
+                    <div class="monitor-header">
+                        <div class="monitor-title">
+                            <i class="fas fa-satellite-dish"></i>
+                            <span>Threat Intelligence Center</span>
+                        </div>
+                        <div class="monitor-status">
+                            <div class="status-indicator active"></div>
+                            <span>Live Monitoring</span>
+                        </div>
+                    </div>
+                    
+                    <div class="threat-map">
+                        <div class="map-container">
+                            <div class="threat-point" style="top: 20%; left: 15%;" data-threat="SQL Injection">
+                                <div class="threat-pulse"></div>
+                                <div class="threat-info">SQL Injection<br><span>Critical</span></div>
+                            </div>
+                            <div class="threat-point" style="top: 60%; left: 70%;" data-threat="XSS">
+                                <div class="threat-pulse"></div>
+                                <div class="threat-info">XSS Vulnerability<br><span>High</span></div>
+                            </div>
+                            <div class="threat-point" style="top: 35%; left: 85%;" data-threat="CSRF">
+                                <div class="threat-pulse"></div>
+                                <div class="threat-info">CSRF Attack<br><span>Medium</span></div>
+                            </div>
+                            <div class="threat-point" style="top: 75%; left: 25%;" data-threat="Brute Force">
+                                <div class="threat-pulse"></div>
+                                <div class="threat-info">Brute Force<br><span>High</span></div>
+                            </div>
+                            <div class="threat-point" style="top: 45%; left: 50%;" data-threat="Privilege Escalation">
+                                <div class="threat-pulse"></div>
+                                <div class="threat-info">Privilege Escalation<br><span>Critical</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="threat-stats">
+                        <div class="threat-category">
+                            <div class="category-header">
+                                <div class="category-icon critical">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="category-info">
+                                    <span class="category-count">23</span>
+                                    <span class="category-label">Critical</span>
+                                </div>
+                            </div>
+                            <div class="category-bar">
+                                <div class="bar-fill critical" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="threat-category">
+                            <div class="category-header">
+                                <div class="category-icon high">
+                                    <i class="fas fa-shield-virus"></i>
+                                </div>
+                                <div class="category-info">
+                                    <span class="category-count">47</span>
+                                    <span class="category-label">High Risk</span>
+                                </div>
+                            </div>
+                            <div class="category-bar">
+                                <div class="bar-fill high" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="threat-category">
+                            <div class="category-header">
+                                <div class="category-icon medium">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="category-info">
+                                    <span class="category-count">156</span>
+                                    <span class="category-label">Medium</span>
+                                </div>
+                            </div>
+                            <div class="category-bar">
+                                <div class="bar-fill medium" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="scan-progress">
+                        <div class="progress-header">
+                            <span>Security Scan Progress</span>
+                            <span class="progress-percentage">73%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 73%"></div>
+                        </div>
+                        <div class="scan-details">
+                            <span>Scanning: Web Application Layer</span>
+                            <span class="scan-time">ETA: 2m 34s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive VAPT Services</h2>
+                <p>End-to-end security testing solutions tailored to your infrastructure needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="web-app">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Application Testing</h3>
+                    <p>Comprehensive security assessment of web applications following OWASP methodology and industry best practices</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> OWASP Top 10 Assessment</li>
+                        <li><i class="fas fa-check"></i> SQL Injection Testing</li>
+                        <li><i class="fas fa-check"></i> XSS Vulnerability Scan</li>
+                        <li><i class="fas fa-check"></i> Authentication Testing</li>
+                        <li><i class="fas fa-check"></i> Session Management</li>
+                    </ul>
+                    <div class="service-price">Starting at $2,500</div>
+                    <button class="btn btn-outline" onclick="openServiceModal('webApp')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="network">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Penetration Testing</h3>
+                    <p>In-depth network infrastructure security assessment with advanced penetration testing techniques</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Port Scanning & Enumeration</li>
+                        <li><i class="fas fa-check"></i> Vulnerability Assessment</li>
+                        <li><i class="fas fa-check"></i> Privilege Escalation</li>
+                        <li><i class="fas fa-check"></i> Lateral Movement Testing</li>
+                        <li><i class="fas fa-check"></i> Network Segmentation</li>
+                    </ul>
+                    <div class="service-price">Starting at $3,500</div>
+                    <button class="btn btn-outline" onclick="openServiceModal('network')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="mobile">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Security Testing</h3>
+                    <p>Comprehensive security testing for iOS and Android mobile applications with OWASP MASVS compliance</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Static Code Analysis</li>
+                        <li><i class="fas fa-check"></i> Dynamic Testing (DAST)</li>
+                        <li><i class="fas fa-check"></i> API Security Testing</li>
+                        <li><i class="fas fa-check"></i> Data Storage Security</li>
+                        <li><i class="fas fa-check"></i> Runtime Protection</li>
+                    </ul>
+                    <div class="service-price">Starting at $2,000</div>
+                    <button class="btn btn-outline" onclick="openServiceModal('mobile')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="cloud">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Security Assessment</h3>
+                    <p>Comprehensive security evaluation of cloud infrastructure and configurations across major platforms</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> AWS/Azure/GCP Assessment</li>
+                        <li><i class="fas fa-check"></i> IAM Configuration Review</li>
+                        <li><i class="fas fa-check"></i> Container Security</li>
+                        <li><i class="fas fa-check"></i> Compliance Validation</li>
+                        <li><i class="fas fa-check"></i> DevSecOps Integration</li>
+                    </ul>
+                    <div class="service-price">Starting at $4,000</div>
+                    <button class="btn btn-outline" onclick="openServiceModal('cloud')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="api">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>API Security <br>Testing</h3>
+                    <p>Comprehensive API security assessment covering REST, GraphQL, and SOAP endpoints</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> REST/GraphQL Testing</li>
+                        <li><i class="fas fa-check"></i> Authentication Testing</li>
+                        <li><i class="fas fa-check"></i> Rate Limiting Assessment</li>
+                        <li><i class="fas fa-check"></i> Data Validation Testing</li>
+                        <li><i class="fas fa-check"></i> Business Logic Testing</li>
+                    </ul>
+                    <div class="service-price">Starting at $1,800</div>
+                    <button class="btn btn-outline" onclick="openServiceModal('api')">Learn More</button>
+                </div>
+
+                <div class="service-card" data-service="wireless">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Wireless Security Testing</h3>
+                    <p>Comprehensive wireless network security assessment and penetration testing services</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> WiFi Security Assessment</li>
+                        <li><i class="fas fa-check"></i> WPA/WPA2/WPA3 Testing</li>
+                        <li><i class="fas fa-check"></i> Rogue AP Detection</li>
+                        <li><i class="fas fa-check"></i> Bluetooth Security</li>
+                        <li><i class="fas fa-check"></i> IoT Device Testing</li>
+                    </ul>
+                    <div class="service-price">Starting at $2,200</div>
+                    <button class="btn btn-outline" onclick="openServiceModal('wireless')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Methodology Section -->
+    <section id="methodology" class="methodology">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Advanced VAPT Methodology</h2>
+                <p>Systematic approach following industry standards and best practices for comprehensive security assessment</p>
+            </div>
+            
+            <div class="methodology-overview">
+                <div class="methodology-stats">
+                    <div class="method-stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Core Phases</span>
+                    </div>
+                    <div class="method-stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Testing Tools</span>
+                    </div>
+                    <div class="method-stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Test Cases</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="methodology-phases">
+                <div class="phase-item" data-phase="1">
+                    <div class="phase-header">
+                        <div class="phase-number">01</div>
+                        <div class="phase-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="phase-title">
+                            <h3>Reconnaissance & Information Gathering</h3>
+                            <span class="phase-duration">Duration: 1-2 Days</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-description">
+                            <p>Comprehensive information gathering using OSINT techniques to understand the target environment and identify potential attack vectors.</p>
+                        </div>
+                        <div class="phase-details">
+                            <div class="phase-activities">
+                                <h4><i class="fas fa-tasks"></i> Key Activities</h4>
+                                <ul>
+                                    <li>Passive information gathering</li>
+                                    <li>Domain and subdomain enumeration</li>
+                                    <li>Social media intelligence</li>
+                                    <li>DNS reconnaissance</li>
+                                    <li>Email harvesting</li>
+                                    <li>Technology stack identification</li>
+                                </ul>
+                            </div>
+                            <div class="phase-tools">
+                                <h4><i class="fas fa-tools"></i> Tools Used</h4>
+                                <div class="tool-tags">
+                                    <span class="tool-tag">Nmap</span>
+                                    <span class="tool-tag">Recon-ng</span>
+                                    <span class="tool-tag">theHarvester</span>
+                                    <span class="tool-tag">Shodan</span>
+                                    <span class="tool-tag">Maltego</span>
+                                </div>
+                            </div>
+                            <div class="phase-deliverables">
+                                <h4><i class="fas fa-file-alt"></i> Deliverables</h4>
+                                <ul>
+                                    <li>Target asset inventory</li>
+                                    <li>Attack surface mapping</li>
+                                    <li>Intelligence report</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" data-phase="2">
+                    <div class="phase-header">
+                        <div class="phase-number">02</div>
+                        <div class="phase-icon">
+                            <i class="fas fa-crosshairs"></i>
+                        </div>
+                        <div class="phase-title">
+                            <h3>Scanning & Enumeration</h3>
+                            <span class="phase-duration">Duration: 2-3 Days</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-description">
+                            <p>Active scanning to identify live systems, open ports, running services, and potential entry points into the target infrastructure.</p>
+                        </div>
+                        <div class="phase-details">
+                            <div class="phase-activities">
+                                <h4><i class="fas fa-tasks"></i> Key Activities</h4>
+                                <ul>
+                                    <li>Network discovery and port scanning</li>
+                                    <li>Service version detection</li>
+                                    <li>Operating system fingerprinting</li>
+                                    <li>Web application discovery</li>
+                                    <li>Directory and file enumeration</li>
+                                    <li>SSL/TLS configuration analysis</li>
+                                </ul>
+                            </div>
+                            <div class="phase-tools">
+                                <h4><i class="fas fa-tools"></i> Tools Used</h4>
+                                <div class="tool-tags">
+                                    <span class="tool-tag">Nmap</span>
+                                    <span class="tool-tag">Masscan</span>
+                                    <span class="tool-tag">Gobuster</span>
+                                    <span class="tool-tag">Nikto</span>
+                                    <span class="tool-tag">SSLyze</span>
+                                </div>
+                            </div>
+                            <div class="phase-deliverables">
+                                <h4><i class="fas fa-file-alt"></i> Deliverables</h4>
+                                <ul>
+                                    <li>Network topology map</li>
+                                    <li>Service inventory</li>
+                                    <li>Initial findings report</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" data-phase="3">
+                    <div class="phase-header">
+                        <div class="phase-number">03</div>
+                        <div class="phase-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="phase-title">
+                            <h3>Vulnerability Assessment</h3>
+                            <span class="phase-duration">Duration: 3-4 Days</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-description">
+                            <p>Comprehensive vulnerability identification using automated tools and manual testing techniques to discover security weaknesses.</p>
+                        </div>
+                        <div class="phase-details">
+                            <div class="phase-activities">
+                                <h4><i class="fas fa-tasks"></i> Key Activities</h4>
+                                <ul>
+                                    <li>Automated vulnerability scanning</li>
+                                    <li>Manual security testing</li>
+                                    <li>Configuration review</li>
+                                    <li>Patch level assessment</li>
+                                    <li>Weak credential testing</li>
+                                    <li>Risk prioritization</li>
+                                </ul>
+                            </div>
+                            <div class="phase-tools">
+                                <h4><i class="fas fa-tools"></i> Tools Used</h4>
+                                <div class="tool-tags">
+                                    <span class="tool-tag">Nessus</span>
+                                    <span class="tool-tag">OpenVAS</span>
+                                    <span class="tool-tag">Burp Suite</span>
+                                    <span class="tool-tag">OWASP ZAP</span>
+                                    <span class="tool-tag">Qualys</span>
+                                </div>
+                            </div>
+                            <div class="phase-deliverables">
+                                <h4><i class="fas fa-file-alt"></i> Deliverables</h4>
+                                <ul>
+                                    <li>Vulnerability assessment report</li>
+                                    <li>Risk matrix</li>
+                                    <li>Remediation priorities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" data-phase="4">
+                    <div class="phase-header">
+                        <div class="phase-number">04</div>
+                        <div class="phase-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="phase-title">
+                            <h3>Exploitation & Penetration</h3>
+                            <span class="phase-duration">Duration: 4-5 Days</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-description">
+                            <p>Controlled exploitation of identified vulnerabilities to validate security weaknesses and demonstrate potential impact.</p>
+                        </div>
+                        <div class="phase-details">
+                            <div class="phase-activities">
+                                <h4><i class="fas fa-tasks"></i> Key Activities</h4>
+                                <ul>
+                                    <li>Proof of concept development</li>
+                                    <li>Privilege escalation testing</li>
+                                    <li>Lateral movement simulation</li>
+                                    <li>Data exfiltration testing</li>
+                                    <li>Persistence mechanism testing</li>
+                                    <li>Impact assessment</li>
+                                </ul>
+                            </div>
+                            <div class="phase-tools">
+                                <h4><i class="fas fa-tools"></i> Tools Used</h4>
+                                <div class="tool-tags">
+                                    <span class="tool-tag">Metasploit</span>
+                                    <span class="tool-tag">Cobalt Strike</span>
+                                    <span class="tool-tag">Empire</span>
+                                    <span class="tool-tag">BloodHound</span>
+                                    <span class="tool-tag">Mimikatz</span>
+                                </div>
+                            </div>
+                            <div class="phase-deliverables">
+                                <h4><i class="fas fa-file-alt"></i> Deliverables</h4>
+                                <ul>
+                                    <li>Exploitation evidence</li>
+                                    <li>Attack path documentation</li>
+                                    <li>Impact assessment report</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" data-phase="5">
+                    <div class="phase-header">
+                        <div class="phase-number">05</div>
+                        <div class="phase-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="phase-title">
+                            <h3>Analysis & Reporting</h3>
+                            <span class="phase-duration">Duration: 2-3 Days</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-description">
+                            <p>Comprehensive analysis of findings and creation of detailed reports with actionable remediation recommendations.</p>
+                        </div>
+                        <div class="phase-details">
+                            <div class="phase-activities">
+                                <h4><i class="fas fa-tasks"></i> Key Activities</h4>
+                                <ul>
+                                    <li>Findings analysis and validation</li>
+                                    <li>Risk assessment and scoring</li>
+                                    <li>Executive summary creation</li>
+                                    <li>Technical report writing</li>
+                                    <li>Remediation roadmap development</li>
+                                    <li>Compliance mapping</li>
+                                </ul>
+                            </div>
+                            <div class="phase-tools">
+                                <h4><i class="fas fa-tools"></i> Tools Used</h4>
+                                <div class="tool-tags">
+                                    <span class="tool-tag">Custom Templates</span>
+                                    <span class="tool-tag">CVSS Calculator</span>
+                                    <span class="tool-tag">Risk Matrix</span>
+                                    <span class="tool-tag">Compliance Frameworks</span>
+                                </div>
+                            </div>
+                            <div class="phase-deliverables">
+                                <h4><i class="fas fa-file-alt"></i> Deliverables</h4>
+                                <ul>
+                                    <li>Executive summary report</li>
+                                    <li>Technical findings report</li>
+                                    <li>Remediation roadmap</li>
+                                    <li>Compliance assessment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phase-item" data-phase="6">
+                    <div class="phase-header">
+                        <div class="phase-number">06</div>
+                        <div class="phase-icon">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <div class="phase-title">
+                            <h3>Retesting & Validation</h3>
+                            <span class="phase-duration">Duration: 1-2 Days</span>
+                        </div>
+                    </div>
+                    <div class="phase-content">
+                        <div class="phase-description">
+                            <p>Validation of implemented fixes and security improvements to ensure vulnerabilities have been properly addressed.</p>
+                        </div>
+                        <div class="phase-details">
+                            <div class="phase-activities">
+                                <h4><i class="fas fa-tasks"></i> Key Activities</h4>
+                                <ul>
+                                    <li>Fix validation testing</li>
+                                    <li>Regression testing</li>
+                                    <li>Security control verification</li>
+                                    <li>Residual risk assessment</li>
+                                    <li>Final security certification</li>
+                                    <li>Continuous monitoring setup</li>
+                                </ul>
+                            </div>
+                            <div class="phase-tools">
+                                <h4><i class="fas fa-tools"></i> Tools Used</h4>
+                                <div class="tool-tags">
+                                    <span class="tool-tag">Targeted Scanners</span>
+                                    <span class="tool-tag">Manual Testing</span>
+                                    <span class="tool-tag">Verification Scripts</span>
+                                    <span class="tool-tag">Monitoring Tools</span>
+                                </div>
+                            </div>
+                            <div class="phase-deliverables">
+                                <h4><i class="fas fa-file-alt"></i> Deliverables</h4>
+                                <ul>
+                                    <li>Retest validation report</li>
+                                    <li>Security certification</li>
+                                    <li>Monitoring recommendations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="methodology-footer">
+                <div class="methodology-standards">
+                    <div class="section-header">
+                    <h2>Industry Standards & Frameworks</h2>
+                    </div>
+                    <div class="standards-grid">
+                        <div class="standard-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>OWASP</span>
+                        </div>
+                        <div class="standard-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>NIST</span>
+                        </div>
+                        <div class="standard-item">
+                            <i class="fas fa-lock"></i>
+                            <span>ISO 27001</span>
+                        </div>
+                        <div class="standard-item">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>PCI DSS</span>
+                        </div>
+                        <div class="standard-item">
+                            <i class="fas fa-user-shield"></i>
+                            <span>GDPR</span>
+                        </div>
+                        <div class="standard-item">
+                            <i class="fas fa-hospital"></i>
+                            <span>HIPAA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="contact-title">Get in Touch</h2>
+                <p class="contact-description">
+                    Ready to transform your career? Contact us today to learn more about our training programs.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>info@techxservices.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>123 Tech Street<br>Silicon Valley, CA 94000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form class="contact-form" action="/contact" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Service Modals -->
+    <div id="webAppModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-globe"></i> Web Application Testing</h2>
+                <span class="close" onclick="closeModal('webAppModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Comprehensive security assessment of web applications following OWASP methodology and industry best practices.</p>
+                <h3>What's Included:</h3>
+                <ul>
+                    <li>OWASP Top 10 vulnerability assessment</li>
+                    <li>SQL injection and NoSQL injection testing</li>
+                    <li>Cross-site scripting (XSS) testing</li>
+                    <li>Authentication and session management testing</li>
+                    <li>Business logic testing</li>
+                    <li>Input validation and sanitization testing</li>
+                    <li>File upload security testing</li>
+                    <li>API endpoint security assessment</li>
+                </ul>
+                <h3>Deliverables:</h3>
+                <ul>
+                    <li>Executive summary report</li>
+                    <li>Technical vulnerability report with CVSS scoring</li>
+                    <li>Proof of concept demonstrations</li>
+                    <li>Detailed remediation recommendations</li>
+                    <li>Compliance mapping (OWASP, PCI DSS)</li>
+                </ul>
+                <div class="modal-pricing">
+                    <span class="modal-price">Starting at $2,500</span>
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fas fa-play"></i> VAPT Methodology Demo</h2>
+                <span class="close" onclick="closeModal('demoModal')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>Interactive VAPT Methodology Demo</p>
+                        <small>See our comprehensive approach in action</small>
+                    </div>
+                </div>
+                <p>Watch our detailed demonstration to understand how TechXServices conducts vulnerability assessments and penetration testing. Learn about our systematic approach, tools, and methodologies that ensure comprehensive security coverage.</p>
+                <div class="demo-highlights">
+                    <h3>Demo Highlights:</h3>
+                    <ul>
+                        <li>Live vulnerability scanning demonstration</li>
+                        <li>Penetration testing techniques showcase</li>
+                        <li>Report generation walkthrough</li>
+                        <li>Remediation planning process</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification System -->
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Message sent successfully!</span>
+        </div>
+    </div>

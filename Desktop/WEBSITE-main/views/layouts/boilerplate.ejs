@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <% var cssFiles = typeof cssFiles !== 'undefined' ? cssFiles : []; %>
+    <% var jsFiles = typeof jsFiles !== 'undefined' ? jsFiles : []; %>
+    <!-- Conditionally load home.css -->
+  <% if (!cssFiles || cssFiles.length === 0) { %>
+    <link rel="stylesheet" href="/css/home.css">
+  <% } else { %>
+    <% cssFiles.forEach(file => { %>
+      <link rel="stylesheet" href="/css/<%= file %>.css">
+    <% }) %>
+  <% } %>
+</head>
+<body>
+    <%- include('../includes/header') %>
+    
+    <main>
+        <%- body %>
+    </main>
+    
+    <%- include('../includes/footer') %>
+    
+    <script src="/js/home.js"></script>
+    <!-- Conditionally load home.js -->
+  <% if (!jsFiles || jsFiles.length === 0) { %>
+    <script src="/js/home.js"></script>
+  <% } else { %>
+    <% jsFiles.forEach(file => { %>
+      <script src="/js/<%= file %>.js"></script>
+    <% }) %>
+  <% } %>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6793f08b3a842732607499c7/1iicu797t';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
