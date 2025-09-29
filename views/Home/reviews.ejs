@@ -1,0 +1,53 @@
+<%- layout('layouts/boilerplate') %>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">
+                <span class="text-accent">Reviews</span>
+            </h1>
+            <p class="page-subtitle">
+                Backed by thousands of success stories from aspiring and seasoned professionals
+            </p>
+        </div> 
+    </section>
+
+    <!-- Add Review Button -->
+    <div class="text-center m-5">
+        <%- include('../partials/review-modal') %>
+    </div>
+
+    <!-- reviews sec -->
+<div class="container my-5">
+  <% if (reviews && reviews.length) { %>
+    <div class="row justify-content-center">
+      <% reviews.forEach(function(r) { %>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body d-flex flex-column">
+              
+              <!-- Rating Stars -->
+              <div class="mb-2">
+                <% for (let i = 1; i <= 5; i++) { %>
+                  <i class="fas fa-star <%= i <= r.rating ? 'text-warning' : 'text-muted' %>"></i>
+                <% } %>
+              </div>
+
+              <!-- Comment -->
+              <p class="card-text flex-grow-1">"<%= r.comment %>"</p>
+
+              <!-- Author Info -->
+              <div class="mt-3 text-end">
+                <h6 class="mb-0 fw-bold"><%= r.username %></h6>
+                <h6 class="mb-0 fw-bold"><%= r.designation %></h6>
+              </div>
+ 
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <p class="text-muted text-center" style="text-align: center;">No reviews yet. Be the first to add one!</p>
+  <% } %>
+</div>

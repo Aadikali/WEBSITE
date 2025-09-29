@@ -527,7 +527,7 @@
 
             <!-- View All Courses Button -->
             <div class="section-footer">
-                <a href="courses.html">
+                <a href="/courses">
                 <button class="view-all-btn">
                     View All Courses
                     <i class="fas fa-arrow-right"></i>
@@ -563,28 +563,39 @@
         </div>
         
         <div class="testimonials-grid">
-            <% testimonials.forEach(testimonial => { %>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
+            <% if (reviews && reviews.length) { %>
+            <div class="testimonials-grid">
+                <% reviews.forEach(function(r) { %>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
                     <div class="testimonial-rating">
-                        <% for(let i = 1; i <= 5; i++) { %>
-                            <i class="fas fa-star <%= i <= testimonial.rating ? 'active' : '' %>"></i>
+                        <% for (let i = 1; i <= 5; i++) { %>
+                        <i class="fas fa-star <%= i <= r.rating ? 'active' : '' %>"></i>
                         <% } %>
                     </div>
-                    <p class="testimonial-message">"<%= testimonial.message %>"</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        <img src="/placeholder.svg?height=60&width=60&text=<%= testimonial.name.charAt(0) %>" alt="<%= testimonial.name %>">
+                    <p class="testimonial-message">"<%= r.comment %>"</p>
                     </div>
+
+                    <div class="testimonial-author">
                     <div class="author-info">
-                        <h4 class="author-name"><%= testimonial.name %></h4>
-                        <p class="author-role"><%= testimonial.role %> at <%= testimonial.company %></p>
+                        <h4 class="author-name"><%= r.username %></h4>
+                        <h6 class="author-name"><%= r.designation %></h6>
+                    </div>
                     </div>
                 </div>
+                <% }) %>
             </div>
-            <% }); %>
+            <% } else { %>
+            <p class="no-reviews">No reviews yet.</p>
+            <% } %>
+
         </div>
+
+        <div class="testimonial-button-container">
+            <a href="/reviews" class="btn btn-primary testimonial-button me-3">View Reviews</a>
+            <%- include('../partials/review-modal') %>
+        </div>
+
     </div>
 </section>
 
